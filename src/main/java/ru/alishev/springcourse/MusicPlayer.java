@@ -1,11 +1,13 @@
 package ru.alishev.springcourse;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicPlayer {
+    private List<Music> musicList = new ArrayList<>();
     private Music music;
     private String name;
     private int volume;
-
-
 
     // IoC
     public MusicPlayer(Music music) {
@@ -37,5 +39,13 @@ public class MusicPlayer {
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    public List<Music> getMusicList() {
+        return musicList;
+    }
+
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
     }
 }
